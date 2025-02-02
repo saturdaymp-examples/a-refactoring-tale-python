@@ -1,0 +1,11 @@
+services:
+  app:
+    build: python:3.13.1-alpine3.21
+    volumes:
+      - .:/app
+      - pip-packages:/usr/local/lib/python3.13/site-packages
+    working_dir: /app
+    entrypoint: /app/docker-entrypoint.sh
+
+volumes:
+  pip-packages:
