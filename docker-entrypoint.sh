@@ -4,7 +4,7 @@
 set -e
 
 # Install Python requirements
-pip install -r requirements.txt
+pip install -r /app/requirements.txt
 
 # Execute the command passed to the script
 exec "$@"
