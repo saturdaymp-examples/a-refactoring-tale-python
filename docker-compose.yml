@@ -1,6 +1,6 @@
 services:
   app:
-    build: python:3.13.1-alpine3.21
+    image: python:3.13.1-alpine3.21
     volumes:
       - .:/app
       - pip-packages:/usr/local/lib/python3.13/site-packages
