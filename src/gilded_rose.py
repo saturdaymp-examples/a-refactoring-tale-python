@@ -1,14 +1,9 @@
-from ItemUpdator import update_item
+from item_updator import update_item
 
 class GildedRose(object):
 
     def __init__(self, items):
         self.items = items
-
-    # If ConjuredItem
-    #   Do something
-    # Else
-    #   Do something
 
     def update_quality(self):
         for item in self.items:
