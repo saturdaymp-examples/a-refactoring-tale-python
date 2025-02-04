@@ -1,8 +1,11 @@
 def update(item):
-    if item.name.startswith("Conjured"):
+    if is_conjured_item(item):
         update_conjured(item)
     else:
         update_normal_brie_sulfuras_baskstage(item)
+
+def is_conjured_item(item):
+    return item.name.startswith("Conjured")
 
 def update_normal_brie_sulfuras_baskstage(item):
     if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
