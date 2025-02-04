@@ -1,14 +1,10 @@
-def update_item(item):
+def update(item):
     if item.name.startswith("Conjured"):
-        if item.sell_in > 0:
-            item.quality -= 2
-        else:
-            item.quality -= 4
+        update_conjured(item)
+    else:
+        update_normal_brie_sulfuras_baskstage(item)
 
-        item.sell_in = item.sell_in - 1
-
-        return
-
+def update_normal_brie_sulfuras_baskstage(item):
     if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
         if item.quality > 0:
             if item.name != "Sulfuras, Hand of Ragnaros":
@@ -36,3 +32,12 @@ def update_item(item):
         else:
             if item.quality < 50:
                 item.quality = item.quality + 1
+
+
+def update_conjured(item):
+    if item.sell_in > 0:
+        item.quality -= 2
+    else:
+        item.quality -= 4
+
+    item.sell_in = item.sell_in - 1

@@ -1,4 +1,4 @@
-from item_updator import update_item
+from item_updator import update
 
 class GildedRose(object):
 
@@ -7,7 +7,7 @@ class GildedRose(object):
 
     def update_quality(self):
         for item in self.items:
-            update_item(item)
+            update(item)
 
 
 class Item:
