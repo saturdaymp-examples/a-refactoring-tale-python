@@ -1,4 +1,14 @@
 def update_item(item):
+    if item.name.startswith("Conjured"):
+        if item.sell_in > 0:
+            item.quality -= 2
+        else:
+            item.quality -= 4
+
+        item.sell_in = item.sell_in - 1
+
+        return
+
     if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
         if item.quality > 0:
             if item.name != "Sulfuras, Hand of Ragnaros":
