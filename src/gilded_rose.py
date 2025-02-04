@@ -1,4 +1,4 @@
-from item_updator import update
+from src.item_updator import update
 
 class GildedRose(object):
 

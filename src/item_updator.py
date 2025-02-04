@@ -40,4 +40,7 @@ def update_conjured(item):
     else:
         item.quality -= 4
 
+    if item.quality < 0:
+        item.quality = 0
+
     item.sell_in = item.sell_in - 1
